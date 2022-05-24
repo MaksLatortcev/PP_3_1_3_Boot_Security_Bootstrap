@@ -1,5 +1,5 @@
 <div th:fragment="edit_user">
-    <div class="container-sm">
+    <div class="border-0 mx-auto px-4 py-4 bg-white text-dark col-md-8">
         <form class="text-center"
               method="POST"
               th:action="@{/admin/edit}"
@@ -60,11 +60,18 @@
                     </div>
                 </div>
             </div>
-
-            <div class="form-check" th:each="role: ${roles}">
-                <input class="form-check-input" type="checkbox" th:field="*{roles}" th:value="${role.getId()}"
-                       id="formCheckDefault">
-                <b><label class="form-check-label" for="formCheckDefault" th:text="${role.getRoleName()}"> </label> </b>
+            <div class="mx-3">
+                <div class="center">
+                    <b><label class="mb-2">Role</label></b>
+                    <div align="left">
+                        <div class="form-check" th:each="role: ${roles}">
+                            <input class="form-check-input" type="checkbox" th:field="*{roles}"
+                                   th:value="${role.getId()}"
+                                   th:text="${role.getRoleName()}"
+                                   id="formCheckDefault">
+                        </div>
+                    </div>
+                </div>
             </div>
         </form>
     </div>
