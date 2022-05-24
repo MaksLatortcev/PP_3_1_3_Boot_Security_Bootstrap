@@ -10,10 +10,12 @@
                     <b><label for="editId" class="center">ID</label></b>
                     <input type="hidden" class="align-content-md-center form-control" name="id"
                            th:value="${user.getId()}">
-                    <input type="number" class="align-content-md-center form-control" name="id"
-                           disabled="disabled"
-                           th:value="${user.getId()}"
-                           id="editId">
+                    <div class="m-2">
+                        <input type="number" class="align-content-md-center form-control" name="id"
+                               disabled="disabled"
+                               th:value="${user.getId()}"
+                               id="editId">
+                    </div>
                 </div>
             </div>
             <div class="row mb-3">
